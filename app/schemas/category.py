@@ -13,6 +13,12 @@ class CategoryCreate(CategoryBase):
     pass
 
 
+class CategoryUpdate(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    is_active: Optional[bool] = None
+
+
 class CategoryResponse(CategoryBase):
     id: int
     created_at: datetime
